@@ -1,0 +1,6 @@
+ingress is a default load balancer or router to the service that are in use of outer world.
+
+user this format to get it.
+http://rome.support/frontend
+to get the status of microservices 
+http://rome.support/microservicetraceUI

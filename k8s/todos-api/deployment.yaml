@@ -5,7 +5,7 @@ metadata:
     app: microservice-app-example
   name: todos-api
 spec:
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -27,7 +27,7 @@ spec:
         - name: ZIPKIN_URL
           value: http://zipkin:9411/api/v2/spans
           
-        image: todos-api
+        image: dockerkriish/microservices:todo-api
         name: todos-api
         ports:
         - containerPort: 8082

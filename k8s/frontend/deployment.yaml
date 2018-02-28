@@ -5,7 +5,7 @@ metadata:
     app: microservice-app-example
   name: frontend
 spec:
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -22,7 +22,7 @@ spec:
           value: http://todos-api:8082
         - name: ZIPKIN_URL
           value: http://zipkin:9411/api/v2/spans
-        image: frontend
+        image: dockerkriish/microservices:frontend
         name: frontend
         ports:
         - containerPort: 8080

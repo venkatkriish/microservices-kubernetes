@@ -5,7 +5,7 @@ metadata:
     app: microservice-app-example
   name: log-message-processor
 spec:
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -23,7 +23,7 @@ spec:
         - name: ZIPKIN_URL
           value: http://zipkin:9411/api/v1/spans
           
-        image: log-message-processor
+        image: dockerkriish/microservices:log-message-processor
         name: log-message-processor
         imagePullPolicy: Never
       restartPolicy: Always
